@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jSZWQ/Er64H3w2Ayn5AgiWl7JDI+TS68joLDViPw8Eo=",
+  "Source": "WebApi.ExceptionHandling.Poc",
+  "BasePath": "_content/WebApi.ExceptionHandling.Poc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

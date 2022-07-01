@@ -1,0 +1,36 @@
+{
+  "version": "2.0",
+  "logging": {
+    "logLevel": {
+      "Function": "Error",
+      "Function.Function1.User": "Information"
+    }
+  },
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.Seq"
+    ],
+    "MinimumLevel": {
+      "Override": {
+        "Host.Results": "Error",
+        "Host.Aggregator": "Error",
+        "Microsoft": "Error",
+        "System": "Error"
+      }
+    },
+    "Enrich": [ "FromLogContext" ],
+    "WriteTo": [
+      {
+        "Name": "Seq",
+        "Args": { "serverUrl": "http://localhost:5341" }
+      },
+      {
+        "Name": "Console",
+        "Args": {
+          "theme": "Serilog.Sinks.SystemConsole.Themes.AnsiConsoleTheme::Code, Serilog.Sinks.Console",
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} <s:{SourceContext}>{NewLine}{Exception}"
+        }
+      }
+    ]
+  }
+}
